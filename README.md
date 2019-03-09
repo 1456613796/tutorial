@@ -18,13 +18,14 @@
 > 	+ result.json &nbsp;&nbsp;&nbsp;*//爬取的url*
 > 	+ url.txt &nbsp;&nbsp;&nbsp;*//经过分析的有用的url*
 
-###整体流程：###
+###整体流程：
 * 1、使用 *zhaopin_geturls.py* 从网页中进行数据爬取
 * 2、使用 *url_analysis.py* 对爬取的数据进行分析，判断重复的数据，删除重复的url
 * 3、使用 *quote_detail_data.py* 进行数据爬取
 
-##文件内容##
-###zhaopin_geturls.py###
+##文件内容
+
+###zhaopin_geturls.py
 ```python
 import scrapy
 
@@ -58,7 +59,7 @@ class QuotesTalent(scrapy.Spider):
 
 > 在命令行输入：*scrapy crawl talent*
 
-###url_analysis.py###
+###url_analysis.py
 ```python
 import json
 import os
@@ -125,7 +126,7 @@ if __name__ == '__main__':
 
 > 直接执行main函数即可
 
-###quote_detail_data.py###
+###quote_detail_data.py
 
 ```python
 import scrapy
